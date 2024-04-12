@@ -1,4 +1,4 @@
-# Развёртывание Nginx и Kyecloak для ботов в коробках
+# Развёртывание Бота в коробке для ДОЛ "Бауманец" 2024г.
 
 ## Предвариательные требования
 
@@ -14,14 +14,14 @@ ansible-galaxy install -r requirements.yml
 ansible -i inventory.yaml all --module-name include_role --args name=bmstu.vats.ssh_connection
 ```
 
-## Иницилазция и получение сертификатов
+## Запуск бота
 
 ```bash
-ansible-playbook playbooks/01-init.yaml -i inventory.yaml
+ansible-playbook playbook.yaml -i inventory.yaml -t deploy
 ```
 
-## Запуск Keycloak и nginx в Docker
+## Добавление параметров Nginx
 
 ```bash
-ansible-playbook playbooks/02-docker.yaml -i inventory.yaml
+ansible-playbook playbook.yaml -i inventory.yaml -t nginx
 ```
