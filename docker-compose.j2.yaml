@@ -9,7 +9,7 @@ x-logging:
 
 services:
   {{ secrets.bot.id }}:
-    image: twobrowin/box-bot:1.5.4
+    image: twobrowin/box-bot:1.5.5
     logging: *default-logging
     ports:
       - target:    5432
