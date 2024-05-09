@@ -9,7 +9,7 @@ x-logging:
 
 services:
   {{ secrets.bot.id }}:
-    image: twobrowin/box-bot:1.5.5
+    image: twobrowin/box-bot:1.6.0
     logging: *default-logging
     ports:
       - target:    5432
@@ -47,9 +47,8 @@ services:
 
       KEYCLOAK__URL: "https://{{ secrets.server_name }}{{ secrets.keycloak.url_path }}/"
       KEYCLOAK__REALM:      "{{ secrets.keycloak.realm }}"
-      KEYCLOAK__UI_CLIENT:  "{{ secrets.keycloak.ui_client }}"
-      KEYCLOAK__API_CLIENT: "{{ secrets.keycloak.api_client }}"
-      KEYCLOAK__API_SECRET: "{{ secrets.keycloak.api_secrets }}"
+      KEYCLOAK__CLIENT: "{{ secrets.keycloak.client }}"
+      KEYCLOAK__SECRET: "{{ secrets.keycloak.secrets }}"
       
       TG_TOKEN: "{{ secrets.tg_api }}"
       
