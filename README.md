@@ -23,5 +23,5 @@ ansible-playbook playbook.yaml -i inventory.yaml -t deploy
 ## Добавление параметров Nginx
 
 ```bash
-ansible-playbook playbook.yaml -i inventory.yaml -t nginx
+ansible-playbook playbook.yaml -i inventory.yaml -t nginx_config
 ```
