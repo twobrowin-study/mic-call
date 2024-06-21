@@ -66,4 +66,4 @@ networks:
     external: true
 
 volumes:
-  data-{{ secrets.bot.id }}:
+  data:
