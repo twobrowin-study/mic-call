@@ -12,7 +12,7 @@
     - role: bmstu.vats.init
       vault_path_secrets:
         - boxed-bots/data/main,infrastructure-secrets.yaml
-        - boxed-bots/data/baumanec-pioneer-2024,secrets.yaml
+        - boxed-bots/data/mic-call,secrets.yaml
 
 #############################################################################
 #                       1) Запуск сервиса                                   #
